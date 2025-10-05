@@ -1,4 +1,4 @@
-Here is my math note. Hope that these notes could help people to help people who love math.
+Here is my math learning journal. Hope that these notes could help people to help people who love math.
 
 Note: most of the math notes are hand-written as a PDF. In the resource, some books are co-authored, but considering the space, I only wrote the first author. Also, because of the copyright issue, there's no links. 
 
