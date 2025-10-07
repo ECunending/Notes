@@ -16,7 +16,7 @@ License -- Solidity version -- Main body
 3. Mapping Type: the data structure that stores key-value pair -- similar to hash tables.
 4. Function Types: It is in Value Type, actually, but it's very different from other types.
 
-1. Boolean
+1. **Boolean**
 ```Solidity
 bool public_bool = true;
 ```
@@ -28,7 +28,7 @@ Operations of boolean values include:
 - != inequality
 Note: The && and || follows a short-circuit evaluation rule.
 
-2. Integers
+2. **Integers**
 ``` Solidity
 int public _int = -1
 uint public _uint = 1 //unsigned integers
@@ -38,7 +38,7 @@ Operations of integer values include:
 - Arithmetic Operator: +, -, *, %, /, **
 - Inequality Operator (returns a boolean): <=, <, >, >=, ==, !=
 
-3. Addresses
+3. **Addresses**
 - Address: holds a 20 byte value (size of an Ethereum address)
 - Payable Address: Same as address, but with additional numbers -- transfer and send to allow ETH transactions.
 ```solidity
@@ -46,7 +46,7 @@ address public _address = 0x7A58c0Be72BE218B41C608b7Fe7C5bB630736C71;
 address payable public _address1 = payable(_address)
 unit256 public balance = _address1.balance
 ```
-4. Fixed-size byte arrays
+4. **Fixed-size byte arrays**
 Byte arrays have two types:
 - Fixed length byte array: belongs to value type, including byte, bytes8, bytes32, etc. depending on the size of each element(maximum 32 bytes)
 - Variable length byte array: belongs to reference type. The length of the array can be modified after declaration.
@@ -55,7 +55,7 @@ Byte arrays have two types:
 byte32 public _byte32 = "MiniSolidity";
 byte1 public _byte = _byte32[0];
 ```
-5. Enumeration
+5. **Enumeration**
 It's a user-defined data type within Solidity, mainly used to assign names to uint.
 ```solidity
 enum ActionSet{ Buy, Hold, Sell}
