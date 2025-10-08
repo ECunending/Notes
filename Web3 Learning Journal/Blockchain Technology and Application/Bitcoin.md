@@ -45,7 +45,7 @@ They are linked with the hash pointer. (Note: it's the hash of all previous bloc
 ## 3. Merkel Tree
 The difference between Merkel Tree and Binary Tree is that Merkel Tree uses the hash pointer. 
 
-!![IMG_0259](https://github.com/user-attachments/assets/b1e36356-200f-4cf1-b540-05374f1ec83a)
+![IMG_0259](https://github.com/user-attachments/assets/b1e36356-200f-4cf1-b540-05374f1ec83a)
 
 In Bitcoin, there are two types of nodes -- full node and light node (their responsibility will be discussed later in this class). 
 
