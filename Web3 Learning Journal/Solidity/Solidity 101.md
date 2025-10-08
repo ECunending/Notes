@@ -64,6 +64,14 @@ ActionSet action = ActionSet.Buy;
 function enumToUint() external view returns(uint){
     return uint(action);
 }
+```
+
+## 3. Function
+The form of function:
+```solidity
+function <function name>([parameter types[, ...]]){internal| external| public| private} [pure|view|payable][virtual| override] [<modifiers>][return (returns (<return types>)]{<function body>}
+```
+ 
 
 
    
