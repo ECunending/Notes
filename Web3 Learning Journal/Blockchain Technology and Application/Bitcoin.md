@@ -29,3 +29,7 @@ This is the asymmetric encryption algorithm: Each key pair consists of a public 
 If **A** wants to give some bitcoins to **B**, **A** uses the public key of **B** to encrypt the message, and **B** uses his private key to decrypt. The message should include the digital signature of **A** to prove the identity. To sign the digital signature, **A** uses his private key, and to check it, **B** uses the **A**'s public key. (Assume that there is a good source of randomness generating public and private keys.)
 
 # Lecture 2: Data Structures of Bitcoin
+## 1. Hash Pointer 
+Hash pointer points to the previous block and contains its hash. Hash pointer does not work if there is a ring in the data structure.
+## 2. Blockchain
+Blockchain is a linked list using hash pointers.
