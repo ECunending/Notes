@@ -67,12 +67,39 @@ function enumToUint() external view returns(uint){
 ```
 
 ## 3. Function
-The form of function:
+# 1. The form of function:
 ```solidity
 function <function name>([parameter types[, ...]]){internal| external| public| private} [pure|view|payable]
 [virtual| override] [<modifiers>][return (returns (<return types>)]{<function body>}
 ```
- 
+- function: key word
+- function name
+- parameter types
+- {internal|external|public|private} Function visibility specifiers
+  - internal: can only be accessed internally and by contracts deriving it
+  - external: can only be called from other contracts or called by *this.f()* inside the contract, where *f* is the function name.
+  - public: visible to all
+  - private: can only be accessed within the contract, derived contracts cannot use it.
+- pure|view|payable: Keywords that dictates a function's behavior
+
+# 2. What is Pure and View?
+Solidity adds these two keywords because of the high **gas fee**. If we don't rewrite these variables -- modify the state on chain(use pure and view), we don't need to pay gas fee. 
+
+Behaviors that modify the state on chain: 
+- Writing to state variables.
+- Emitting events.
+- Creating another contracts.
+- Using selfdestruct.
+- Sending Ether via calls.
+- Calling any function not marked view or pure
+- using low-level calls
+- using inline assembly that contains certain episodes.
+
+Pure: cannot read and write
+
+View: can read but not write
+
+Default: can read and write 
 
 
    
