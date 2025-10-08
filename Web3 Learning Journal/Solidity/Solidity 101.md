@@ -101,5 +101,29 @@ View: can read but not write
 
 Default: can read and write 
 
+## 4. Return
+1. Return Values -- two keywords: Return and Returns
+- returns is added after the function name to declare variable type and variable name
+- return is used in the function body and returns desired variables.
+```solidity
+function returnMultiple() public pure returns(uint256, bool, uint256[3] memory){
+    return (1, true, [uint256(1), 2, 5]);
+}
+```
+2. Also, we can indicate the name of the return variables in returns such that solidity automatically initialize those variables and return the value of those functions without adding the return keyword. 
+```solidity
+function returnNamed() public pure returns(uint256 _number, bool _bool, uint256[3] memory _array){
+    _number = 2;
+    _bool = false;
+    _array = [uint256(3), 2, 1];
+}
+```
+3. Destructing Assignments
+```solidity
+uint256 _number;
+bool _bool;
+uint256[3] memory _array;
+(_number, _bool, _array) = returnNamed();
+```
 
    
