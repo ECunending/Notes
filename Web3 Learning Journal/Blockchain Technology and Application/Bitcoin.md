@@ -61,3 +61,46 @@ In fact, there is a more efficient way for proof of non-membership -- **Sorted M
 
 In Bitcoin, we do not use the **Sorted Merkel Tree** because there is no need for non-membership proof. 
 
+# Lecture 3: Protocol
+## 1. Blockchain Details
+Suppose A is transferring money to B.
+
+Every transaction includes input (the source of money and A's public key) and output (B's public key and A's digital signature). In this way, we can avoid double spending. 
+
+In fact, in every block, the transactions form a Merkel Tree.
+
+![IMG_3FA960D137F7-1](https://github.com/user-attachments/assets/cddf798e-b078-417d-9d76-4f5ab33c9bcd)
+
+Every block is composed of block header and block body.
+- block header: includes version, hash of previous block header, Merkel root hash, target (of mining), nonce
+- block body: transaction list.
+There are full nodes (fully validating node) and light nodes.
+
+## 2. Distributed Consensus
+Account details need to gain distributed consensus to maintain the distributed hash table.
+
+Some viewpoints:
+- FLP Impossibility Result: In a asynchronous system, if there is a "faulty" person, the system cannot reach a consensus.
+- CAP Theorem: A distributed data store cannot simultaneously guarantee Consistency, Availability, and Partition Tolerance (at most two of them).
+
+## 3. Consensus in Bitcoin
+If using vote, we need to verify the membership. For example, in the hyperledger fabric, only big company can be involved in. 
+
+Otherwise, Sybil Attack will happen -- the malicious attackers will ceaselessly produce public and private key pairs to gain the vote right.
+
+To avoid these scenario, Bitcoin uses the **Proof of Work**. There is a 4 byte nonce in the target of every block header. Finding the nonce can gain the vote right
+
+When the hash of previous block header is not pointing to the longest valid chain, there are branches in the blockchain, which is also called forking attack. Usually, the next block should point to the longest valid chain. 
+
+If two nodes gain the vote right simultaneously, other nodes just wait. The one that mine the next block first will gain the vote right, since that is the longest valid chain. Actually, this is a competition of hash rating and good luck. The other just becomes the orphan block. 
+
+*Why do we “fight" for the right to add new blocks?*
+Block reward. 
+
+Coinbase Transaction is the only way to issue Bitcoin.
+
+At first, the reward for each block is 50 BTC. After 21w blocks (approximately 4 years), the number becomes 25 BTC （halve).
+
+Some Supplement:
+- when the hash rate is larger, the probability of mining blocks increases.
+- we use the word "mining"/"miner" because Bitcoin is like the digital gold. 
