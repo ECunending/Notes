@@ -104,3 +104,26 @@ At first, the reward for each block is 50 BTC. After 21w blocks (approximately 4
 Some Supplement:
 - when the hash rate is larger, the probability of mining blocks increases.
 - we use the word "mining"/"miner" because Bitcoin is like the digital gold. 
+
+# Lecture 4: Implementation
+## 1. BTC: transaction-based ledger 
+
+Full nodes maintain UTXO (Unspent Transaction Output -- including the hash of generating the transaction and the number of transactions（1st/2nd/...), Avoid Double Spending.
+
+Besides the block reward, miners can also get the transaction fee because people pay the fees to miners to avoid they only wrap their own transactions.
+
+BTC: approximately a new block generates in 10 minutes.
+
+$\frac{210000 * 10 min}{60min * 24h * 365 days} \approx 4 years$
+
+Thus, after 2016 blocks, people change the difficulty of mining to ensure that on average, miners can find next new block every ten minutes.
+
+Note: there's another mode -- account-based ledger, which is used in ETH.
+
+## 2. More details about mining
+To increase the space of looking for nonce, miners can also use the first few bits of coinbase transaction as extra nonce.
+
+The reason is that the content in coinbase transaction does not matter, but changing it affects the Merkel Tree Root Hash.
+![IMG_569DA1A6CA54-1](https://github.com/user-attachments/assets/24a24e90-071a-4b99-921f-4510dc1ed5de)
+
+Everytime miners try nonce can be viewed as a Bernoulli Trail -- a random experiment with binary outcome. 
