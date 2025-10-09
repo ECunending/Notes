@@ -127,3 +127,26 @@ The reason is that the content in coinbase transaction does not matter, but chan
 ![IMG_569DA1A6CA54-1](https://github.com/user-attachments/assets/24a24e90-071a-4b99-921f-4510dc1ed5de)
 
 Everytime miners try nonce can be viewed as a Bernoulli Trail -- a random experiment with binary outcome. 
+
+Bernoulli Process: A sequence of independent Bernoulli trail (memoryless, which means that the former results have no effect on the later results.)
+
+When mining, the Bernoulli process is approximately the Poisson process(many times but low probability each time)
+![IMG_BE33F8DD6333-1](https://github.com/user-attachments/assets/b1d88ff6-b992-48fe-9e51-00042ed0d5e1)
+The time to the next block follows exponential distribution. 
+
+Because of this feature, mining is *process free*, that is, imagine miners have mined for 10 mins, and get nothing. Then, next block may still be 10 mins later. Thus, solving the mining process time is meaningless. 
+
+In this way, Bitcoin is secured by mining, assuming that the majority of nodes are not malicious. 
+
+We can also calculate the total number of BTCs.
+
+$210000*50 + 210000 * 25 + \cdots = 210000 * 50 * (1+\frac{1}{2}+\frac{1}{4}+\cdots) = 21,000,000$
+
+By the formula of geometric sequence sum:
+$a+ar^2+ar^3+\cdots = \frac{a}{1-r}$ when $r<1$.
+
+## 3. How blockchain protects BTC?
+Sometimes, malicious nodes may gain the right to write the next block. 
+1. He cannot steal BTC.
+Without the private key and digital signiture, he can't get the coin. Even though it is written on the chain, the chain will not be the longest valid chain.
+2. May double spending ( very difficult)
