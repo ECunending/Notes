@@ -151,9 +151,7 @@ Sometimes, malicious nodes may gain the right to write the next block.
 Without the private key and digital signiture, he can't get the coin. Even though it is written on the chain, the chain will not be the longest valid chain.
 2. May double spending (very difficult)
 In theory, the malicious hacker could implement the forking attack. That is, he write the transaction and rollback simultaneously to produce two branches. The trading platform saw the transaction block and thought that they got the money. However, the hacker generates next block after the rollback chain to make it become the longest valid chain.
-
 This method is very difficult since in blockchain, other nodes basically wait for 6 blocks(six confirmation -- about 1 hour). 
-
 Therefore, the immutability of blockchain is guaranteed based on probability. 
 
 There's another method, which is more commonly used -- zero confirmation, because honest nodes won't receive the rollback chain, and there is a time difference between trading and delivering goods. 
@@ -163,6 +161,5 @@ There's another method, which is more commonly used -- zero confirmation, becaus
 This doesn't matter since other blocks will include them.
 4. Selfish mining
 Normally, miners find a block and immediately publish it.
-
 On the contrary, hackers may find many new blocks and publish them all together to implement the forking attack. The prerequisite of doing so is that the hacker has very huge hash rate. 
    
