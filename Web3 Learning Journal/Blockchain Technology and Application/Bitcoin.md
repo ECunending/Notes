@@ -163,3 +163,15 @@ This doesn't matter since other blocks will include them.
 Normally, miners find a block and immediately publish it.
 On the contrary, hackers may find many new blocks and publish them all together to implement the forking attack. The prerequisite of doing so is that the hacker has very huge hash rate. 
    
+# Lecture 5: Bitcoin Network
+- Application layer: Bitcoin Blockchain
+- Network layer: P2P Overlay Network
+In BTC, every nodes are equivalent. There's no supernode or master node.
+
+If one wants to join the network, he needs to know the seed node.
+
+The principle of designing the BTC Network: simple, robust, but not efficient. (Message propagation is via flooding. First send to zero-distance node randomly, then mark this message)
+
+The limit storage of one block is 1M. Thus, it takes several seconds for the information to all the nodes.
+
+Best effort: A transaction may not be received by all nodes due to network latency, and the order of receipt may also vary. Additionally, some nodes might relay incorrect transactions.
