@@ -175,3 +175,26 @@ The principle of designing the BTC Network: simple, robust, but not efficient. (
 The limit storage of one block is 1M. Thus, it takes several seconds for the information to all the nodes.
 
 Best effort: A transaction may not be received by all nodes due to network latency, and the order of receipt may also vary. Additionally, some nodes might relay incorrect transactions.
+
+# Lecture 6: The Difficulty of Mining
+$Mining: H(block header) <= target$
+
+The encryption algorithm in BTC is *SHA256*; its output space is $2^256$, which is very large.
+
+$difficulty = \frac{difficulty-one-target}{target}$
+
+If we don't change the difficulty, the next block will be mined faster and faster.
+
+If the time to next block is very fast, new blocks don't have enough time to disseminate in Bitcoin network. Then, forking attack will becomes very common because there are many branches, and hackers can easily make theirs to become the longest valid chain.
+
+
+
+target = target * (actual time -- time spent mining the last 2016 blocks / expected time -- 2016*10)
+
+This formula is equivalent to the below one.
+
+next difficulty = previous difficulty * (2 weeks/time to mine last 2016 blocks)
+
+With the formula, we know that people need to change the difficulty of mining every 14 days.
+
+By the way, the malicious nodes cannot change the mining difficulty by themselves because other nodes won't guarantee this behavior.
