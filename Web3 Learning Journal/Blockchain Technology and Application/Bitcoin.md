@@ -198,3 +198,38 @@ next difficulty = previous difficulty * (2 weeks/time to mine last 2016 blocks)
 With the formula, we know that people need to change the difficulty of mining every 14 days.
 
 By the way, the malicious nodes cannot change the mining difficulty by themselves because other nodes won't guarantee this behavior.
+
+# Lecture 7: Mining
+Full node:
+- always online
+- maintain the blockchain information locally
+- maintain the UTXO in storage for quickly checking the correctness of the transactions.
+- Check the validity of transactions on BTC network
+- Decides which transactions will be include in new blocks
+- Check the validity of new blocks mined by other miners
+- Mining
+Light node (simplified payment verification clients -- SPV clients):
+- not always online
+- only store block header
+- only store transactions that relate to themselves
+- can only check the validity of above transactions
+- can't check the correctness of other blocks in the BTC network
+- can check the difficulty of mining
+- can check the longest chain, but don't know which longest chain is legal
+
+Equipment for mining:
+**CPU** to **GPU** to **ASIC** (Application Specific Integrated Circuit); ASIC can only be used for solving mining puzzles. 
+
+Some coins will set their mining puzzles as the same as other popular coins to attract more miners. This strategy is called **merge mining**.
+
+To be fair, some coins design alternative mining puzzle, which is ASIC resistance.
+
+Mining Pool: 
+
+A pool manager (full node) is connected with many miners. Pool manager is responsible for all tasks of full nodes except the mining. Miners only need to solve the mining puzzle. 
+
+Ways to distribute profit: When each miner get a share (almost valid block), he said it to pool manager for proof of work. Then, the profits is distributed based on how much work each miner does.
+
+Miners can't publish new blocks because the task is assigned by the pool manager ( the address of the block is from the pool manager); if he changes the address, he can't get share because the Merkle Tree Root changes, and pool manager knows that.
+
+If a mining pool controls >50% hashrate, they can employ forking attack and even boycott, which means that they will exclude all of someone's transaction. However, they cannot steal coins since they don't have others' private keys. 
