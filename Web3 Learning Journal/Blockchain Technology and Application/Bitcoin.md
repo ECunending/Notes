@@ -207,7 +207,8 @@ Full node:
 - Check the validity of transactions on BTC network
 - Decides which transactions will be include in new blocks
 - Check the validity of new blocks mined by other miners
-- Mining
+
+Mining
 Light node (simplified payment verification clients -- SPV clients):
 - not always online
 - only store block header
