@@ -234,3 +234,62 @@ Ways to distribute profit: When each miner get a share (almost valid block), he 
 Miners can't publish new blocks because the task is assigned by the pool manager ( the address of the block is from the pool manager); if he changes the address, he can't get share because the Merkle Tree Root changes, and pool manager knows that.
 
 If a mining pool controls >50% hashrate, they can employ forking attack and even boycott, which means that they will exclude all of someone's transaction. However, they cannot steal coins since they don't have others' private keys. 
+
+# Lecture 8: BTC Script Language
+BTC is a stack-based language.
+```solidity
+"result":{
+    "txid": "921a...dd24",
+    "hash": "921a...dd24",
+    "version": 1,
+    "size": 226,
+    "locktime": 0,
+    "vin": [...],
+    "vout": [...],
+    "blockhash": " 0x2c...5c0b",
+    "confirmation": 23,
+    "time": 1530846727,
+    "blocktime": 1530846727
+}
+```
+Generally, locktime equals 0. If it is not zero, the transaction need to wait for {locktime} to be written in the blocks.
+
+The input structure of transactions:
+```solidity
+"vin":[{
+    "txid":"c0cb...c57b",
+    "vout": 0,
+    "scriptSig": {
+        "asm": "3045...0018",
+        "hex": "4830...0018"
+    },
+}]
+```
+The first two lines are about where the coins from.
+
+Later, "scriptSig" will be replaced by input script.(just for notation)
+
+The output structure of transactions:
+<img width="906" height="595" alt="Screenshot 2025-10-14 at 4 36 44 PM" src="https://github.com/user-attachments/assets/22fa9d63-93cc-43ab-a51a-5a8dc222cb6d" />
+Later, "scriptPubKey" will be replace by output script.(just for notation)
+<img width="964" height="637" alt="Screenshot 2025-10-14 at 4 40 04 PM" src="https://github.com/user-attachments/assets/462de4da-60ed-4b55-a71e-d7b50058bece" />
+To check the correctness, we put the output of A to B and the input of B to C together in early stage of BTC. However, considering some security problems, now wwe first check the input script, and then we check the output script.
+
+There are some forms of input and output scripts:
+- P2PK (Pay to Public Key)
+
+input script: PUSHDATA(Sig)
+
+output script: PUSHDATA (PubKey), CHECKSIG
+
+- P2PKH (Pay to Public Key Hash) -- commonly used
+  
+input script: PUSHDATA(Sig), PUSHDATA (PubKey)
+
+output script: DUP, HASH160, PUSHDATA(PubKeyHash), EQUALVERITY, CHECKSIG
+
+- P2SH (Pay to Script Hash)
+  
+input script: PUSHDATA(Sig), PUSHDATA (serialized redeemScript)
+
+output script: HASH160, PUSHDATA (redeemScript), EQUAL
