@@ -305,3 +305,18 @@ The form of output is called Provably Unspendable/Prunable Outputs
 AltCoin (Alternative Coin) requires clients to burn (destroy) some BTC to get some AltCoins.
 
 Spending only a few amount of BTC to write the hash of some content after the return. Then, it will be written into the blockchain.
+
+# Lecture 9: Fork
+
+- State Fork (there are some differences in opinions)
+   - including forking attack (deliberate fork)
+- Protocol Fork
+   - caused by different contracts (Some are update, but others don't)
+   - Hard Fork
+     - when adding new features(e.g. change the block size limit to 4M), if some nodes don't agree with the new feature, hark fork appears.
+     - some nodes mine new blocks on the old chain, but others mine blocks on the new chain
+     - community is divided into two groups. Thus, one coin is separated into two coins, and each of them has their own chain id.(e.g. ETH &ETC)
+   - Soft Fork
+     - temporary fork (e.g. change the block size limit to 0.5M)
+     - old nodes will give up their chains, and continue to mine blocks on the new chain.
+     - Ultimately, it will end up being only one chain
