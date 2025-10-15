@@ -293,3 +293,15 @@ output script: DUP, HASH160, PUSHDATA(PubKeyHash), EQUALVERITY, CHECKSIG
 input script: PUSHDATA(Sig), PUSHDATA (serialized redeemScript)
 
 output script: HASH160, PUSHDATA (redeemScript), EQUAL
+
+## Proof of Burn ##
+- output script
+
+RETURN [zero or more ops or text]
+
+The form of output is called Provably Unspendable/Prunable Outputs
+- return False, then the output can't be spent, and UTXO can be pruned.
+- Application
+AltCoin (Alternative Coin) requires clients to burn (destroy) some BTC to get some AltCoins.
+
+Spending only a few amount of BTC to write the hash of some content after the return. Then, it will be written into the blockchain.
