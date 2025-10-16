@@ -320,3 +320,8 @@ Spending only a few amount of BTC to write the hash of some content after the re
      - temporary fork (e.g. change the block size limit to 0.5M)
      - old nodes will give up their chains, and continue to mine blocks on the new chain.
      - Ultimately, it will end up being only one chain
+
+# Lecture 10: Questions and Answers
+This lecture is a review for previous lectures in the form of questions and answers.
+
+Therefore, I don't take any notes in this lecture. 
