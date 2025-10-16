@@ -1,6 +1,6 @@
 # Introduction
 Since there's no English version of this class online, and this is a really great class for beginners to understand 
-some fundamental concepts and technology in Blockchain, I saved my English notes here. The note not only includes the class content but also my summary and related supplementary knowledge. 
+some fundamental concepts and technology in Blockchain, I saved my English notes here. ([Chinese notes](https://github.com/CSWellesSun/CSNotes/blob/main/%E5%8C%BA%E5%9D%97%E9%93%BE%E6%8A%80%E6%9C%AF%E4%B8%8E%E5%BA%94%E7%94%A8/Note/%E5%8C%BA%E5%9D%97%E9%93%BE%E6%8A%80%E6%9C%AF%E4%B8%8E%E5%BA%94%E7%94%A8.md) ). Actually, when I wrote this note, I used some part of the Chinese notes from *CSWellesSun* for reference. The note not only includes the class content but also my summary and related supplementary knowledge. 
 
 Also, my notes are divided in two parts -- Bitcoin & Ethereum (ETH). 
 
