@@ -325,3 +325,19 @@ Spending only a few amount of BTC to write the hash of some content after the re
 This lecture is a review for previous lectures in the form of questions and answers.
 
 Therefore, I don't take any notes in this lecture. 
+
+# Lecture 11: Bitcoin and Anonymity  
+In Bitcoin, people can produce many public and private key pair and many addresses, but this does not mean that bitcoin network is totally anonymous.
+
+We say that Bitcoin network has pseudonymity, which is more anonymous than the bank but less than the cash. 
+
+Different accounts have connections, and Bitcoin has connection with the real world. When it is connected with the real world, people in Bitcoin network may leak some personal information -- the process of financial flow (transfer in & transfer out).
+
+Take Silk Road (an illegal website) as an example, the pseudonymity in BTC is way less productive than people thought (the founders of the website was arrested.) Thus, we should have a reasonable expectation. 
+
+*How to increase anonymity in BTC network?*
+
+- Network Layer:
+
+- Application Layer: 
+
