@@ -337,7 +337,7 @@ Take Silk Road (an illegal website) as an example, the pseudonymity in BTC is wa
 
 *How to increase anonymity in BTC network?*
 
-- Network Layer:
+- Network Layer: Utilizing TOR, encrypting your internet traffic and routing it through a decentralized network of volunteer-operated servers, or "relays," to obscure your IP address and location.
 
-- Application Layer: 
+- Application Layer: Coin mixing. The Crypto Wallet has the function of coin mixing; Central exchange naturally has the function of coin mixing. 
 
