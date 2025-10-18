@@ -365,4 +365,8 @@ Finally, Bob calculate E(7). If $E(7) = E(x+y)$, the proof is succeeded. Otherwi
 - Centralization
 
 **Zerocoin & Zerocash**:
-- 
+- Zerocoin and Zerocash incorporate anonymization processing at the protocol level, with their anonymity attributes guaranteed by cryptography.
+- In the Zerocoin system, there are basecoins and zerocoins. By converting back and forth between basecoins and zerocoins, the associativity between old and new addresses is eliminated, with a principle similar to that of coin-mixing services.
+- The Zerocash system uses the zk-SNARKs protocol and does not rely on a basecoin. The blockchain only records the existence of transactions and proofs of critical attributes required for miners to verify the system’s normal operation. Neither transaction addresses nor transaction amounts are displayed on the blockchain; all transactions are conducted through zero-knowledge verification.
+
+  
