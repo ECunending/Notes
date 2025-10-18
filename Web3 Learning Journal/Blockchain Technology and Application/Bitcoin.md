@@ -341,3 +341,13 @@ Take Silk Road (an illegal website) as an example, the pseudonymity in BTC is wa
 
 - Application Layer: Coin mixing. The Crypto Wallet has the function of coin mixing; Central exchange naturally has the function of coin mixing. 
 
+## Zero-knowledge Proof
+Definition： A zero-knowledge proof is a protocol in which one party can convince another party that the given statement is true, without conveying to the verifier any information beyond the mere fact of that statement's truth. 
+
+Homomorphic Encryption：
+- If $x != y$, their value after encrypting $E(x) != E(y)
+- If we know E(x), it is very hard to know the value of x.
+- If we know E(x) and E(y), it is pretty easy to get the value of other encryption values of x and y, such as E(x+y), E(xy), and other polynomials.
+
+Example: Alice want to show Bob that she knows a pair of x,y such that x+y = 7, while she doesn't want Bob to know the exact value of x and y. 
+
