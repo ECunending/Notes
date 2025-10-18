@@ -344,10 +344,25 @@ Take Silk Road (an illegal website) as an example, the pseudonymity in BTC is wa
 ## Zero-knowledge Proof
 Definition： A zero-knowledge proof is a protocol in which one party can convince another party that the given statement is true, without conveying to the verifier any information beyond the mere fact of that statement's truth. 
 
-Homomorphic Encryption：
+**Homomorphic Encryption**:
 - If $x != y$, their value after encrypting $E(x) != E(y)
 - If we know E(x), it is very hard to know the value of x.
 - If we know E(x) and E(y), it is pretty easy to get the value of other encryption values of x and y, such as E(x+y), E(xy), and other polynomials.
 
 Example: Alice want to show Bob that she knows a pair of x,y such that x+y = 7, while she doesn't want Bob to know the exact value of x and y. 
 
+First step: Alice sends E(x) and E(y) to Bob -- Bob does not know the value of x and y according to the second property
+
+Second Step: Bob uses E(x) and E(y) to get E(x+y) -- the third property
+
+Finally, Bob calculate E(7). If $E(7) = E(x+y)$, the proof is succeeded. Otherwise, the proof is failed. -- the first property 
+
+**Blind Signature**：
+- A provides SerialNum, and the central bank returns signature token without knowing the SerialNum to decrease the deposit of A
+- A sends SerialNum and Token to B to finish the transaction.
+- B provides SerialNum and Token, and the central bank checks the validity of this transaction. Then, the deposit of B increases.
+- The central bank cannot connect A with B
+- Centralization
+
+**Zerocoin & Zerocash**:
+- 
