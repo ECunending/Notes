@@ -373,3 +373,9 @@ Finally, Bob calculate E(7). If $E(7) = E(x+y)$, the proof is succeeded. Otherwi
 In the Bitcoin network， there are only hash value（pointers are just a vivid analogy). The full node saves (key, value). Usually, people use levelDB to recall.
 
 For the shared account, don't split the private key into several parts (decrease the difficulty of cracking the private key）。 Instead， use MULTISIG.
+
+*Why Bitcoin can reach the consensus without encountering the impossibility theorem in the distributed consensus？*
+
+In fact, Bitcoin does not reach the "real" consensus. If forking attacks happen, the original consensus will break. 
+
+Also, there are always differences between the theory and the real life. 
