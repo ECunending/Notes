@@ -369,4 +369,7 @@ Finally, Bob calculate E(7). If $E(7) = E(x+y)$, the proof is succeeded. Otherwi
 - In the Zerocoin system, there are basecoins and zerocoins. By converting back and forth between basecoins and zerocoins, the associativity between old and new addresses is eliminated, with a principle similar to that of coin-mixing services.
 - The Zerocash system uses the zk-SNARKs protocol and does not rely on a basecoin. The blockchain only records the existence of transactions and proofs of critical attributes required for miners to verify the system’s normal operation. Neither transaction addresses nor transaction amounts are displayed on the blockchain; all transactions are conducted through zero-knowledge verification.
 
-  
+# Lecture 12: Review and Reflection of Bitcoin
+In the Bitcoin network， there are only hash value（pointers are just a vivid analogy). The full node saves (key, value). Usually, people use levelDB to recall.
+
+For the shared account, don't split the private key into several parts (decrease the difficulty of cracking the private key）。 Instead， use MULTISIG.
