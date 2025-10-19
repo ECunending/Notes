@@ -23,7 +23,7 @@ Basically, we can view a Contract as a Class.
 Constructor: in contract, it means that the function can only run once upon deployment. 
 
 ## 2.Function and Value Types
-## Storage and Variables
+### Storage and Variables
 Variables declared in contract scope are storage variables. Solidity stores these in contiguous storage slots.(0x1,0x2,...) 
 
 Variables stored in contract scope allocate a storage slot (except for constant).
@@ -33,3 +33,16 @@ Slots are 32 bytes (e.g. 0x1 means 0x000...001).
 Reading/ Writing to storage is relatively super expensive to other opcodes.
 
 Variables can be packed together, automatically or manually. 
+
+### Functions
+Visibility specifiers: 
+- private: call me within this contract
+- internal: call me within this contract (+inheritance)
+- public: call me inside and outside this contract
+- external: call me from outside this contract
+
+State Mutability:
+- pure: I cannot read/write to storage.
+- view: I can read from storage, not write.
+- payable: send me some ether!
+- without pure/view: I can read and write to storage. 
