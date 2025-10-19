@@ -21,3 +21,15 @@ Basically, we can view a Contract as a Class.
 - Enum: defining options for a value by name
 
 Constructor: in contract, it means that the function can only run once upon deployment. 
+
+## 2.Function and Value Types
+## Storage and Variables
+Variables declared in contract scope are storage variables. Solidity stores these in contiguous storage slots.(0x1,0x2,...) 
+
+Variables stored in contract scope allocate a storage slot (except for constant).
+
+Slots are 32 bytes (e.g. 0x1 means 0x000...001).
+
+Reading/ Writing to storage is relatively super expensive to other opcodes.
+
+Variables can be packed together, automatically or manually. 
