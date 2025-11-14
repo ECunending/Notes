@@ -10,4 +10,4 @@ Proof of Stake instead of Proof of Work
 
 Support Smart Contract (If we can decentralize currency, what else can we decentralize?)
 
-By the way, the minimum unit of BTC is Satoshi, and the minimum unit of ETH is Wei. (They are very small units)
+By the way, the minimum unit of BTC is Satoshi, and the minimum unit of ETH is Wei.
