@@ -20,3 +20,4 @@ In this way, double spending attack is impossible.
 Disadvantages: Replay Attack -- the payee broadcasts a transaction several times. (Note: it's impossible in BTC)
 
 Solution: 
+sssss
