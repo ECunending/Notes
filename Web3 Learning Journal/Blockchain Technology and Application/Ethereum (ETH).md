@@ -19,5 +19,9 @@ In this way, double spending attack is impossible.
 
 Disadvantages: Replay Attack -- the payee broadcasts a transaction several times. (Note: it's impossible in BTC)
 
-Solution: 
+Solution: let nonce (counter/sequence number) as the transaction number and write nonce in each transaction
+
+There are two kinds of accounts in ETH:
+- Externally Owned Account (balance & nonce)
+- Smart Contract Account (can't make a transaction & code and storage)
 
