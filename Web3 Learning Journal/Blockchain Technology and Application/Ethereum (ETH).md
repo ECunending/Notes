@@ -41,6 +41,11 @@ Trie is a is a specialized search tree data structure used to store and retrieve
 
 We can solve all problems mentioned above using Trie. 
 
-However, there's a waste of storage in Trie. After path compression, we can get a Patricia tree (Patricia trie).
+However, there's a waste of storage in Trie. After path compression, we can get a Patricia tree (Patricia trie), which is more effective.
 
+4. MPT
+What ETH uses is Modified MPT (Merkle Patricia Tree).
 
+A Merkle-Patricia trie is deterministic and cryptographically verifiable: The only way to generate a state root is by computing it from each individual piece of the state, and two states that are identical can be easily proven so by comparing the root hash and the hashes that led to it (a Merkle proof). 
+
+ETH data structure is a "big" MPT with lots of "small" MPT (each block corresponding to a MPT)
