@@ -49,3 +49,10 @@ What ETH uses is Modified MPT (Merkle Patricia Tree).
 A Merkle-Patricia trie is deterministic and cryptographically verifiable: The only way to generate a state root is by computing it from each individual piece of the state, and two states that are identical can be easily proven so by comparing the root hash and the hashes that led to it (a Merkle proof). 
 
 ETH data structure is a "big" MPT with lots of "small" MPT (each block corresponding to a MPT)
+
+Each Ethereum block generates a new MPT, but most of its nodes are the same as those in the previous MPT — only new branches need to be added. The reason it isn’t modified in place is that temporary forks are common, and the losing fork must be rolled back. At the same time, the way smart contracts are implemented makes it impossible to reconstruct previous states solely from transactions, so historical information needs to be preserved.
+
+There are three kinds of "trees" in ETH: State Tree (store key-value pair), Transaction Tree, and Receipt Tree. 
+
+5. How do the state of the account store in the state tree?
+Use RLP (Recursive Length Prefix).
