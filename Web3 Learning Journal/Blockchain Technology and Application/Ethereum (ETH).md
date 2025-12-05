@@ -28,22 +28,22 @@ There are two kinds of accounts in ETH:
 # Lecture 15: ETH Data Structure
 ETH account address is 160 bit -- 20 bytes. ETH needs to maintain a mapping from address to state.
 
-1. If we use the hash table (because it seems like a key-value pair), when there is a new transaction, the hash table changes, and we need to construct a new merkle tree to provide a new merkle proof, which cost a lot of time. 
+1. **If we use the hash table (because it seems like a key-value pair), when there is a new transaction, the hash table changes, and we need to construct a new merkle tree to provide a new merkle proof, which cost a lot of time.**
 
 BTC does not such problem since the merkle tree in BTC is immutable. 
 
-2. If we use merkle tree directly and change a small part of the tree each time, what will happen?
+2. **If we use merkle tree directly and change a small part of the tree each time, what will happen?**
 - if we don't use sorted merkle tree, we can't prove non-membership AND the merkle tree users construct is not unique (the order of leaf nodes is different), which leads to the difference of root hash value.
 - if we use sorted merkle tree, when there's a new account, we need to construct a new merkel tree (results similar to the hash table method)
 
-3. Trie (Data Structure)
+3. **Trie (Data Structure)**
 Trie is a is a specialized search tree data structure used to store and retrieve strings from a dictionary or set. Unlike a binary search tree, nodes in a trie do not store their associated key. Instead, each node's position within the trie determines its associated key, with the connections between nodes defined by individual characters rather than the entire key.
 
 We can solve all problems mentioned above using Trie. 
 
 However, there's a waste of storage in Trie. After path compression, we can get a Patricia tree (Patricia trie), which is more effective.
 
-4. MPT
+4. **MPT**
 What ETH uses is Modified MPT (Merkle Patricia Tree).
 
 A Merkle-Patricia trie is deterministic and cryptographically verifiable: The only way to generate a state root is by computing it from each individual piece of the state, and two states that are identical can be easily proven so by comparing the root hash and the hashes that led to it (a Merkle proof). 
@@ -54,5 +54,6 @@ Each Ethereum block generates a new MPT, but most of its nodes are the same as t
 
 There are three kinds of "trees" in ETH: State Tree (store key-value pair), Transaction Tree, and Receipt Tree. 
 
-5. How do the state of the account store in the state tree?
+5. **How do the state of the account store in the state tree?**
+
 Use RLP (Recursive Length Prefix).
