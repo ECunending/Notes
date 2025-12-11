@@ -60,3 +60,13 @@ There are three kinds of "trees" in ETH: State Tree (store key-value pair), Tran
 5. **How do the state of the account store in the state tree?**
 
 Use RLP (Recursive Length Prefix).
+
+# Lecture 16: ETH Transaction Tree and Receipt Tree
+
+They are all MPT. Every transaction has a receipt. With them, we can execute merkle proof more easily.
+
+Bloom Filter (data structure): whether the specific element is in the large list or not. With bloom filter, we have higher efficiency, but at the same time, we may encounter false positive situations (impossible for false negative). 
+
+We can't remove elements in the (binary) bloom filter. By only checking the bloom filter on the transaction header, we don't need to consider many unrelated blocks. 
+
+We can view ETH as a transaction-driven state machine. As an analogy, we can also view BTC as a transaction-driven state machine where UTXO is the state. 
