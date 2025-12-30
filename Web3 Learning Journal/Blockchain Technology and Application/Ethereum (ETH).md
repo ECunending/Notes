@@ -73,4 +73,9 @@ We can view ETH as a transaction-driven state machine. As an analogy, we can als
 
 # Lecture 17: GHOST
 
-The **GHOST (Greedy Heaviest Observed Subtree)** Protocol is a consensus mechanism designed to 
+The **GHOST (Greedy Heaviest Observed Subtree) Protocol** is a consensus mechanism designed to improve efficiency and security of blockchain networks like ETH. 
+
+If ETH uses what BTC uses, there will be many branches and orphan block (stale block), which is not beneficial to individual miner, leading to mining centralization (centralization bias). Thus, ETH uses **GHOST Protocol**.
+
+The 1st version of GHOST: In ETH, orphan blocks are called **uncle block**. If the new block includes an uncle block, the miner can gain $\frac{1}{32}$ extra block reward, and the uncle block can gain $\frac{7}{8}$ of the block reward. Also, a new block can gain at most two uncle blocks. In this way, the branches will soon merge together. 
+
