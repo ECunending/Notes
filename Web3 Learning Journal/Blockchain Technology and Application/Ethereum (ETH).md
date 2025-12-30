@@ -70,3 +70,7 @@ Bloom Filter (data structure): whether the specific element is in the large list
 We can't remove elements in the (binary) bloom filter. By only checking the bloom filter on the transaction header, we don't need to consider many unrelated blocks. 
 
 We can view ETH as a transaction-driven state machine. As an analogy, we can also view BTC as a transaction-driven state machine where UTXO is the state. 
+
+# Lecture 17: GHOST
+
+The **GHOST (Greedy Heaviest Observed Subtree)** Protocol is a consensus mechanism designed to 
