@@ -79,3 +79,18 @@ If ETH uses what BTC uses, there will be many branches and orphan block (stale b
 
 The 1st version of GHOST: In ETH, orphan blocks are called **uncle block**. If the new block includes an uncle block, the miner can gain $\frac{1}{32}$ extra block reward, and the uncle block can gain $\frac{7}{8}$ of the block reward. Also, a new block can gain at most two uncle blocks. In this way, the branches will soon merge together. 
 
+Some probelms: 
+
+- more than two uncle blocks
+- the uncle block appears after the new block
+- because of some business competitions, the new block deliberately does not include the uncle block
+
+Solution: all previous orphan blocks are uncle blocks of the blocks in the longest valid chain. 
+
+To avoid too many uncle blocks, in ETH, the contemporary uncle block can gain $\frac{7}{8}$ block reward. The uncle block at a distance of 2 can gain $\frac{6}{8}$ block reward, and so on (at most seven generations -- six distance -- $\frac{2}{8}$)
+
+In ETH, there are static reward (block reward) and dynamic reward (gas fee). Uncle blocks can only get the "bonus" block reward; they can't get gas fee (very small amount). 
+
+When a new block includes the uncle block, it will not execute the transactions in the uncle block (there will be conflicts sometimes) and check the transaction validity. It will only check whether the uncle block matches the mining difficulty by checking the block header. 
+
+Only the first uncle block can get the reward, and the blocks after the "uncle block chain" will gain nothing because if don't do so, the cost of forking attack is very low, and they can get the reward anyways. 
