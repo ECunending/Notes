@@ -113,4 +113,8 @@ ETH uses pre-mining (reserve lots of ETH for founders). Another related concept 
 
 Now, ETH uses POS(Proof of Stake) instead of POW (Proof of Work), which means that the classical ETH mining stops.
 
+# Lecture 19: Ethereum Mining Difficulty Adjustment Algorithm 
+
+This part is outdated after ETH turns to POS. Thus, I omitted this part of the notes. 
+
 
