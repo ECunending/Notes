@@ -97,3 +97,20 @@ Only the first uncle block can get the reward, and the blocks after the "uncle b
 
 # Lecture 18: Mining Algorithm in ETH
 
+**Blockchain is secured by mining.**
+
+To make mining available to more people, people aim to design ASIC resistance mining puzzle, such as memory hard mining puzzle. 
+
+Ex. LiteCoin used to be the second popular cryptocurrency. It uses scrypt as mining puzzle, which is a time-memory tradeoff. The disadvantage is that light node also faces memory-hard problem. Thus, solving and verifying are both difficult. In LiteCoin, the memory is 128K, which is not ASIC-resistant. 
+
+**Principle of designing mining puzzle: difficult to solve, but easy to verify.**
+
+Data set in ETH -- the smaller one (16M cache) & the bigger one (1G, DAG). They increase with time. Thus, the light node only need to save the smaller data set. 
+
+The mining algorithm（ethash): There is an array where the hash of the seed is placed in the first element, then the hash of the first element is placed in the second, and so on until the entire cache array is filled. Then an initial mix is generated using the element at index i % cache_size in the cache. Next, a loop runs 256 times: in each iteration, get_int_from_item is used to obtain the index of the next cache element to access, that cache element is combined with the mix to produce a new mix, and finally the hash of the mix is stored in the i-th position of the dataset.
+
+ETH uses pre-mining (reserve lots of ETH for founders). Another related concept is pre-sale (it refers to participating in the early fundraising stage of a new crypto project by using Ether (ETH) as payment)
+
+Now, ETH uses POS(Proof of Stake) instead of POW (Proof of Work), which means that the classical ETH mining stops.
+
+
