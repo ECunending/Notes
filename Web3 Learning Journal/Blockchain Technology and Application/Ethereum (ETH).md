@@ -94,3 +94,6 @@ In ETH, there are static reward (block reward) and dynamic reward (gas fee). Unc
 When a new block includes the uncle block, it will not execute the transactions in the uncle block (there will be conflicts sometimes) and check the transaction validity. It will only check whether the uncle block matches the mining difficulty by checking the block header. 
 
 Only the first uncle block can get the reward, and the blocks after the "uncle block chain" will gain nothing because if don't do so, the cost of forking attack is very low, and they can get the reward anyways. 
+
+# Lecture 18: Mining Algorithm in ETH
+
