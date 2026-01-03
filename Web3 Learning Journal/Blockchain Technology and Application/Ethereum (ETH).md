@@ -117,4 +117,16 @@ Now, ETH uses POS(Proof of Stake) instead of POW (Proof of Work), which means th
 
 This part is outdated after ETH turns to POS. Thus, I omitted this part of the notes. 
 
+# Lecture 20: Proof of Stake (PoS)
+In PoW, people buy machines to mine; we can turn to **virtual mining**.
+
+PoS: Validators are chosen to create new blocks based on the amount of cryptocurrency they "stake" (lock up) as collateral, eliminating the need for intense computation and drastically cutting energy use.
+
+Advantages: Save energy; More Secure -- in PoW, coins with relatively small amount of users are vulnerable to real world attack (usually with lots of money); but in PoS, if they buy lots of the specific kind of coin, the price will skyrocket, making it hard to attack. 
+
+In the early stage of PoS, one significant challenge is **nothing at stake** -- when there is a fork, people won't mine two chains simultaneously in PoW, but in PoS, they can stake two chains at the same time. 
+
+In ETH, they use **Casper the Friendly Finality Gadget (FFG)**.
+
+FFG: It introduces validators, who lock up a certain amount of ETH as a security deposit. Their role is to vote on which chain is the correct and longest valid one. Ethereum divides time into epochs (about 50 blocks). At the end of each epoch, validators vote on a checkpoint. Finality is reached through a two-step voting process, conceptually called prepare and commit. Each step requires approval from at least two-thirds of the total staked ETH. In practice, the protocol simplifies this by requiring two consecutive epochs to each receive a two-thirds majority vote for finalization. Validators who vote correctly earn rewards. Misbehavior, such as voting for conflicting chains, leads to slashing, where part or all of the validator’s stake is destroyed. Validators have lock-up and waiting periods, and after the waiting period ends without reports of misconduct, they can withdraw their stake and rewards.
 
