@@ -130,3 +130,5 @@ In ETH, they use **Casper the Friendly Finality Gadget (FFG)**.
 
 FFG: It introduces validators, who lock up a certain amount of ETH as a security deposit. Their role is to vote on which chain is the correct and longest valid one. Ethereum divides time into epochs (about 50 blocks). At the end of each epoch, validators vote on a checkpoint. Finality is reached through a two-step voting process, conceptually called prepare and commit. Each step requires approval from at least two-thirds of the total staked ETH. In practice, the protocol simplifies this by requiring two consecutive epochs to each receive a two-thirds majority vote for finalization. Validators who vote correctly earn rewards. Misbehavior, such as voting for conflicting chains, leads to slashing, where part or all of the validator’s stake is destroyed. Validators have lock-up and waiting periods, and after the waiting period ends without reports of misconduct, they can withdraw their stake and rewards.
 
+![IMG_0368](https://github.com/user-attachments/assets/52ed4423-909b-4247-892b-d5bd9db7c6c6)
+
