@@ -142,3 +142,6 @@ About the code, I will explain them more explicitly in **Solidity** part.
 
 DAO - Decentralized Autonomous Organization. It's also a form of investor-directed venture capital fund. After launching in April 2016 via a token sale, it became one of the largest crowdfunding campaigns in history, but it ceased activity after much of its funds - in the form of US dollar exchanged for "Ether-crypto coins" - were taken in a hack in June 2016.
 
+How to get your(investor) money back -- splitDAO, which is also a method to create a childDAO. The investor need to create his ow childDAO, and invest all of its money to himself to get the money back. Also, there is a 28-day holding period. 
+
+However, hackers used Replay Attack and stole lots of ETH.
