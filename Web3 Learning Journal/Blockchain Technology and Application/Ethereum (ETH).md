@@ -145,3 +145,9 @@ DAO - Decentralized Autonomous Organization. It's also a form of investor-direct
 How to get your(investor) money back -- splitDAO, which is also a method to create a childDAO. The investor need to create his ow childDAO, and invest all of its money to himself to get the money back. Also, there is a 28-day holding period. 
 
 However, hackers used Replay Attack and stole lots of ETH.
+
+TheDAO decided to rollback. There are two steps: 
+- Step 1: Modify the protocol so that accounts related to The DAO cannot carry out transactions — a soft fork. However, a bug appeared: transactions involving these accounts were supposed to be invalid, but gas fees still needed to be charged to prevent DDoS attacks. Due to the bug, such transactions did not charge gas fees. In the end, miners rolled back the version, and this solution failed.
+- Step 2: Forcibly transfer the funds from accounts related to The DAO to a new account without requiring signatures, etc. — a hard fork.
+
+ETH splits into ETH and ETH (Ethereum Classic).
