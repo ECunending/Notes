@@ -132,3 +132,9 @@ FFG: It introduces validators, who lock up a certain amount of ETH as a security
 
 ![IMG_0368](https://github.com/user-attachments/assets/52ed4423-909b-4247-892b-d5bd9db7c6c6)
 
+# Lecture 21 Smart Contract
+
+Smart contract is some code in essence. The smart contract account saves the current execution state in the contract, including balance, nonce, code, and storage (which is a MPT). 
+
+About the code, I will explain them more explicitly in **Solidity** part. 
+
