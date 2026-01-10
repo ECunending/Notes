@@ -156,4 +156,5 @@ ETH splits into ETH and ETH (Ethereum Classic).
 - Is smart contract really smart? It's actually autonomous contracts. It's anything but smart.
 - Immutability is a double-edged sword.
 - Nothing is irrevocable.
-- The design of Solidity is counterintuitive. Some people suggest using functional language. 
+- The design of Solidity is counterintuitive. Some people suggest using functional language.
+- Open source is more secure and have credibility. However, we need to be careful to the **many eyeball fallacy**. 
