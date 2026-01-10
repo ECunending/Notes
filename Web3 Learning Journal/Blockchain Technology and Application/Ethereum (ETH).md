@@ -151,3 +151,9 @@ TheDAO decided to rollback. There are two steps:
 - Step 2: Forcibly transfer the funds from accounts related to The DAO to a new account without requiring signatures, etc. — a hard fork.
 
 ETH splits into ETH and ETH (Ethereum Classic).
+
+# Lecture 23: Reflection
+- Is smart contract really smart? It's actually autonomous contracts. It's anything but smart.
+- Immutability is a double-edged sword.
+- Nothing is irrevocable.
+- The design of Solidity is counterintuitive. Some people suggest using functional language. 
