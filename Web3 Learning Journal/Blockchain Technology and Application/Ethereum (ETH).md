@@ -160,3 +160,8 @@ ETH splits into ETH and ETH (Ethereum Classic).
 - Open source is more secure and have credibility. However, we need to be careful to the **many eyeball fallacy**, which means that only a few people see the original code, and they may do not find the bugs in it.
 - What does decentralization mean? It's not full automation; it does not mean that people cannot change something. Instead, if you want to change something, like rules, you need to adopt a decentralized method. 
 - "Decentralized" is not equivalent to "distributed". BTC and ETH are transaction-driven state machines. Decentralization must be distributed, but distribution is not always decentralized. 
+
+# Lecture 24: Beauty Chain
+Beauty Chain is a smart contract on ETH. Its token is BEC. 
+
+ERC20 (Ethereum Request for Common) is a request for ICO (Initial Coin Offering) on ETH.
