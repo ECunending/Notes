@@ -170,3 +170,5 @@ ERC20 (Ethereum Request for Common) is a request for ICO (Initial Coin Offering)
 Cryptocurrency should be used in areas where traditional finance do not work out very well，such as cross-border payment. 
 
 Information can flow freely on the Internet, but payment cannot. 
+
+Is decentralization always a good thing? 
