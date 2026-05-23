@@ -9,4 +9,5 @@ Note: most of the math notes are hand-written as a PDF, so they are in google dr
 | Math 55: Discrete Mathematics | UC Berkeley -- Mark Haiman | [Book] Discrete Mathematics and its Application (8th edition) -- Kenneth H. Rosen; [Note](https://drive.google.com/file/d/1ZOSDUX3SmKlkXOquouy3N-VSsvQBYjHi/view?usp=drive_link) ; [Core Concept](https://drive.google.com/file/d/18ldPT3kRsmVMzCHxi5Ksyyf-SeWCpxZ2/view?usp=drive_link) |
 | Math 110: Abstract Linear Algebra | UC Berkeley -- Edward Frankel | [Book] Linear Algebra Done Right -- Sheldon Axler; [Note](https://drive.google.com/file/d/15cbnitmu55zynqWikI0BNh9zD9z40BVh/view?usp=drive_link)
 | Stat 134: Concepts of Probability | UC Berkeley -- Adam Lucas | [Book] Probability -- Jim Pitman; [Note](https://drive.google.com/file/d/1r_rnaNqhwONMitazhXgaHQ1Q-8MBkT-V/view?usp=drive_link); [Homework Answer](https://drive.google.com/file/d/1s5LloYF05WDbiiXIMZAnIPIAGY9RbSP2/view?usp=drive_link) |
+| IEOR 198: Introduction to Quantitative Finance | UC Berkeley -- Traders at Berkeley | [Note](https://drive.google.com/file/d/1TspirKMnwk8NnvQeMeqllctPMmnGdaWS/view?usp=drive_link) |
 
